@@ -1,0 +1,296 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.unstyled::-webkit-inner-spin-button, 
+.unstyled::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+h1 {
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 4px;
+    color: white;
+    padding-top: 18px;
+    font-size: 25px;
+}
+
+header {
+    background-color: #25b99a;
+    height: 38.2vh;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.show {
+    opacity: 1;
+}
+
+#taskInfo {
+    float: left;
+    font-size: 15px;
+    font-weight: 400;
+    width: 41vw;
+    height: 40px;
+    left: 100px;
+    text-indent: 18px;
+    background: rgba(255,255,255,0.2);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: none;
+    outline: none;
+    position: absolute;
+    left: 27vw;
+    color: white;
+    padding-right: 18px;
+    font-weight: 300;
+    border: none;
+}
+
+    #taskInfo::placeholder {
+        color: white;
+    }
+
+#dueDate {
+    width: 24vw;
+    height: 40px;
+    text-indent: 18px;
+    background: rgba(255,255,255,0.2);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: none;
+    outline: none;
+    float: left;
+    font-size: 15px;
+    position: relative;
+    top: 60px;
+    left: 26.5vw;
+    text-indent: 5px;
+    color: white;
+    font-weight: 300;
+    border: none;
+    
+}
+
+#dueTime {
+    width: 17vw;
+    height: 40px;
+    left: 100px;
+    text-indent: 18px;
+    background: rgba(255,255,255,0.2);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: none;
+    outline: none;
+    float: left;
+    position: relative;
+    top: 60px;
+    left: 28vw;
+    text-indent: 5px;
+    font-size: 15px;
+    color: white;
+    font-weight: 300;
+    border: none
+}
+
+#submit {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 60px;
+    z-index: 5;
+    border: 0;
+    background: white;
+    top: 83.5px;
+    left: 72vw;
+    outline: none;
+    cursor: pointer;
+}
+
+#reset {
+    position: absolute;
+    width: 15vw;
+    min-width: 85px;
+    height: 22px;
+    left: 28vw;
+    top: 200px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 5px;
+    box-shadow: none;
+    outline: none;
+    float: left;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    color: rgba(255,255,255,0.7);
+    font-weight: 300;
+    text-align: center;
+}
+
+.fill {
+    color: #25b99a;
+}
+
+#tasks {
+    background-color: #edf0f1;
+    height: 61.8vh;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    background-color: #edf0f1;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#tasks ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 95%;
+}
+
+    #tasks ul li .content {
+        height: 150px;
+        width: 45px;
+        margin: 10px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        min-width: 100px;
+        background-color: white;
+        color: #868686;
+        padding: 20px;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+        #tasks ul li .content::-webkit-scrollbar {
+            width: 10px;
+            background-color: #F5F5F5;
+        }
+
+        #tasks ul li .content::-webkit-scrollbar-thumb {
+            background-color: #AAA;
+            border-radius: 10px;
+            background-image: -webkit-linear-gradient(90deg, rgba(0, 0, 0, .2) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, .2) 50%, rgba(0, 0, 0, .2) 75%, transparent 75%, transparent)
+        }
+
+.buttons {
+    width: 120px;
+    height: 25px;
+    left: 13px;
+    margin: 0;
+    top: 35px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+}
+
+li:hover .buttons {
+    opacity: 1;
+}
+
+
+.buttons button {
+    background-color: white;
+    border: none;
+    padding: 5px 0px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.remove, .complete {
+    color: #c0cecb;
+}
+
+    .remove:hover {
+        color: #e85656;
+    }
+
+    .complete:hover {
+        color: #25b99a;
+    }
+
+.mystyle {
+    opacity: 0.5;
+    background-color: #25b99a;
+}
+
+.date {
+    position: relative;
+    left: 44px;
+    font-size: 12px;
+    color: black;
+    font-weight: 300;
+}
+
+
+.time {
+    position: relative;
+    left: 57px;
+    font-size: 15px;
+    color: black;
+    font-weight: 300;
+}
+
+ul:empty::after {
+    content: "You've yet to add any tasks!";
+    width: 100%;
+    color: #868686;
+    padding: 20px;
+    font-size: 15px;
+    font-weight: 300;
+    display: block;
+    text-align: center;
+}
+
+#toDo:first-child{
+        animation: fadeIn 0.9s;
+        animation-fill-mode: forwards;
+    }
+    #toDo li:first-child{
+        animation: fadeIn 0.5s;
+        animation-fill-mode: none;
+    }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}
+
+#span {
+    position: absolute;
+    left: 45vw;
+    top: 187px;
+    border-radius: 5px;
+    box-shadow: none;
+    outline: none;
+    float: left;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    color: rgba(255,255,255);
+    font-weight: 300;
+    text-align: center;
+}
